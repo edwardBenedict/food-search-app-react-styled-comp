@@ -6,7 +6,7 @@ export const DetailContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   background: #00adb5;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 78px);
   /* height: fit-content; */
   padding: 5px;
 
@@ -44,9 +44,17 @@ export const ImgContainer = styled.div`
 
 export const HeaderContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 25px;
   font-size: 3rem;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  img {
+    width: 200px;
+  }
 `;
 
 export const IngContainer = styled.div`

@@ -7,13 +7,17 @@ import {
   IngContainer,
   OtherPart,
 } from "./style";
+import dietSvg from "../../assets/diet.svg";
 
 const Details = (props) => {
   const recipe = props.location.recipe;
 
   return (
     <DetailContainer>
-      <HeaderContainer>{recipe.label}</HeaderContainer>
+      <HeaderContainer>
+        <h1>{recipe.label}</h1>
+        <img src={dietSvg} alt="" />
+      </HeaderContainer>
       <DetailPart>
         <OtherPart>
           <>Nutrients</>
