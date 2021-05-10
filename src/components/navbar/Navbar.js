@@ -23,7 +23,7 @@ const Navbar = () => {
         >
           Github
         </MenuLink>
-        <MenuLink to="/login">Login</MenuLink>
+        <MenuLink to="/login">Logout</MenuLink>
       </Menu>
     </Nav>
   );
