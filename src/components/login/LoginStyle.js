@@ -41,6 +41,7 @@ export const StyledInput = styled.input`
   border: none;
   color: white;
   margin: 1rem;
+  text-indent: 20px;
 `;
 
 export const StyledForm = styled.form`

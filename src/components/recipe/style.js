@@ -7,7 +7,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   background: #e1f1dd;
   height: fit-content;
-  padding: 5px;
+  /* padding: 5px; */
 `;
 
 export const RecipeCard = styled.div`
