@@ -22,7 +22,11 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/login" component={Login} exact setIsAuth={setIsAuth} />
+        <Route
+          path="/login"
+          exact
+          component={() => <Login setIsAuth={setIsAuth} isAuth={isAuth} />}
+        />
         <Route component={AuthContainer} />
       </Switch>
     </BrowserRouter>
