@@ -13,13 +13,13 @@ export const MainHeader = styled.h2`
   font-size: 2rem;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: center;
   border: 2px solid white;
   border-radius: 3px;
-  margin: 5px;
+  margin: 20px;
 `;
 
 export const FoodInput = styled.input`

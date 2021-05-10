@@ -2,8 +2,12 @@ import React from "react";
 import { FormContainer, FoodInput, Button, Select } from "./style";
 
 const Form = ({ setQuery, query, getData }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getData();
+  };
   return (
-    <FormContainer>
+    <FormContainer onSubmit={handleSubmit}>
       <FoodInput
         type="text"
         value={query}
