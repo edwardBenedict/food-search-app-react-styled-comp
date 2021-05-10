@@ -14,7 +14,8 @@ import mealSvg from "../../assets/meal2.svg";
 const Login = ({ setIsAuth, isAuth }) => {
   let history = useHistory();
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     setIsAuth(true);
     console.log(isAuth);
     history.push("/");
@@ -27,9 +28,7 @@ const Login = ({ setIsAuth, isAuth }) => {
         <StyledForm onSubmit={handleSubmit}>
           <StyledInput type="text" placeholder="Username" required />
           <StyledInput type="password" placeholder="Password" required />
-          <StyledButton type="submit" onClick={handleSubmit}>
-            Login
-          </StyledButton>
+          <StyledButton type="submit">Login</StyledButton>
         </StyledForm>
       </FormContainer>
     </LoginContainer>

@@ -15,9 +15,9 @@ export const FormContainer = styled.div`
   width: 600px;
   min-width: 400px;
   height: 600px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #e1f1dd;
   padding: 5px;
   display: flex;
   justify-content: center;
