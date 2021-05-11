@@ -17,7 +17,6 @@ const Login = ({ setIsAuth, isAuth }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsAuth(true);
-    console.log(isAuth);
     history.push("/");
   };
   return (
