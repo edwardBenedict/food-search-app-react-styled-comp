@@ -21,7 +21,7 @@ export const InfoContainer = styled.div`
   max-width: 1000px;
   border: 1px solid white;
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 5px;
 
   a {
     color: white;

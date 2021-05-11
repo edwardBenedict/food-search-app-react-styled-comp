@@ -25,6 +25,7 @@ export const DetailPart = styled.div`
   align-items: center;
   margin: 5vh;
   border: 1px solid white;
+  border-radius: 5px;
   /* height: calc(100vh - 300px); */
 `;
 
