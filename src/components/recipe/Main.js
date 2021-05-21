@@ -7,7 +7,7 @@ import Header from "../header/Header";
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
 
 const Main = () => {
-  const [query, setQuery] = useState("pizza");
+  const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   const [meal, setMeal] = useState(mealTypes[0].toLowerCase());
 
