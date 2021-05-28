@@ -16,6 +16,7 @@ export const MainHeader = styled.h2`
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   border: 2px solid white;
   border-radius: 3px;
