@@ -36,14 +36,17 @@ export const MenuLink = styled(Link)`
   transition: all 0.3s ease-in;
   font-size: 2rem;
   font-family: "Girassol", sans-serif;
-  background-color: #e1f1dd;
-  border: 1px solid #00adb5;
-  border-radius: 10px;
-  width: 100%;
 
   &:hover {
     color: #00adb5;
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    background-color: #e1f1dd;
+    border: 1px solid #00adb5;
+    border-radius: 10px;
+    width: 100%;
   }
 `;
 export const Menu = styled.div`
