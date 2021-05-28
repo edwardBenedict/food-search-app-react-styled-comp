@@ -6,7 +6,7 @@ export const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 80px);
   line-height: 2;
 
   span {
@@ -18,6 +18,7 @@ export const AboutContainer = styled.div`
 
 export const InfoContainer = styled.div`
   text-align: right;
+  margin: 0 10px;
   max-width: 1000px;
   border: 1px solid white;
   padding: 25px;
@@ -31,6 +32,6 @@ export const InfoContainer = styled.div`
 export const HeaderContainer = styled.div``;
 
 export const StyledImage = styled.img`
-  max-width: 500px;
+  width: 500px;
   margin-bottom: 2rem;
 `;

@@ -9,28 +9,29 @@ export const DetailContainer = styled.div`
   min-height: calc(100vh - 78px);
   /* height: fit-content; */
   padding: 5px;
-
-  @media (max-width: 1250) {
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-  }
 `;
 
 export const DetailPart = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin: 5vh;
+  margin: 1rem;
   border: 1px solid white;
   border-radius: 5px;
+  background-color: #e1f1dd;
   /* height: calc(100vh - 300px); */
+
+  @media (max-width: 1250px) {
+    /* justify-content: center;
+    background-color: red;
+    border: 1px solid red; */
+  }
 `;
 
 export const ImgContainer = styled.div`
-  border: 1px solid white;
+  border: 1px solid #00adb5;
   padding: 10px;
   border-radius: 3px;
   margin: 2rem;
