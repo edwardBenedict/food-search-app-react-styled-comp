@@ -5,14 +5,14 @@ export const MainContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  background: #e1f1dd;
+  /* background: #e1f1dd; */
   height: fit-content;
   /* padding: 5px; */
 `;
 
 export const RecipeCard = styled.div`
   height: 300px;
-  background: #00adb5;
+  background: #e1f1dd;
   padding: 5px;
   border-radius: 3px;
   width: 300px;
@@ -35,7 +35,7 @@ export const RecipeImage = styled.img`
 `;
 
 export const Button = styled.button`
-  background-color: #e1f1dd;
+  background-color: #00adb5;
   padding: 5px;
   outline: none;
   height: 2rem;
