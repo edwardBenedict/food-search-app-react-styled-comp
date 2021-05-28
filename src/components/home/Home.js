@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import RecipeCard from "./RecipeCard";
-import { MainContainer } from "./style";
+import { MainContainer, HomeImg, ImgDiv } from "./style";
 import Header from "../header/Header";
+import homeSvg from "../../assets/home.svg";
 
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
 
 const Main = () => {
   const [query, setQuery] = useState("");
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState();
   const [meal, setMeal] = useState(mealTypes[0].toLowerCase());
 
   const APP_ID = "4e9f05eb";
@@ -40,11 +41,17 @@ const Main = () => {
         setMeal={setMeal}
         meal={meal}
       />
-      <MainContainer>
-        {recipes.map((recipe, index) => (
-          <RecipeCard key={index} recipe={recipe.recipe} />
-        ))}
-      </MainContainer>
+      {recipes ? (
+        <MainContainer>
+          {recipes.map((recipe, index) => (
+            <RecipeCard key={index} recipe={recipe.recipe} />
+          ))}
+        </MainContainer>
+      ) : (
+        <ImgDiv>
+          <HomeImg src={homeSvg} />
+        </ImgDiv>
+      )}
     </div>
   );
 };
