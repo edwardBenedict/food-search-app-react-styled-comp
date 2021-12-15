@@ -1,12 +1,16 @@
 import React from "react";
+import Login from "../components/login/Login";
 import Navbar from "../components/navbar/Navbar";
 
-const PrivateRouter = ({ isAuth, children, ...rest }) => {
-  return (
+const PrivateRouter = ({ children, ...rest }) => {
+  const isAuth = localStorage.getItem("isAuth");
+  return isAuth ? (
     <>
       <Navbar />
       {children}
     </>
+  ) : (
+    <Login />
   );
 };
 

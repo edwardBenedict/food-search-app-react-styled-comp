@@ -13,41 +13,26 @@ function AppRouter() {
       <Routes>
         <Route
           path="/"
-          exact
           element={
-            isAuth ? (
-              <PrivateRouter>
-                <Home />
-              </PrivateRouter>
-            ) : (
-              <Login />
-            )
+            <PrivateRouter>
+              <Home />
+            </PrivateRouter>
           }
         />
         <Route
           path="/about"
-          exact
           element={
-            isAuth ? (
-              <PrivateRouter>
-                <About />
-              </PrivateRouter>
-            ) : (
-              <Login />
-            )
+            <PrivateRouter>
+              <About />
+            </PrivateRouter>
           }
         />
         <Route
           path="/details"
-          exact
           element={
-            isAuth ? (
-              <PrivateRouter>
-                <Details />
-              </PrivateRouter>
-            ) : (
-              <Login />
-            )
+            <PrivateRouter>
+              <Details />
+            </PrivateRouter>
           }
         />
         <Route path="/login" exact element={<Login />} />
