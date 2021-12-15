@@ -1,4 +1,6 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+
 import {
   DetailContainer,
   DetailPart,
@@ -6,17 +8,23 @@ import {
   HeaderContainer,
   IngContainer,
   OtherPart,
+  NotFound,
 } from "./style";
 import dietSvg from "../../assets/diet.svg";
 
-const Details = (props) => {
-  const recipe = props.location.recipe;
+const Details = () => {
+  const { state } = useLocation();
+  const recipe = state;
+
+  if (!recipe) {
+    return <NotFound>There is no food.</NotFound>;
+  }
 
   return (
     <DetailContainer>
       <HeaderContainer>
         <h1>{recipe.label}</h1>
-        <img src={dietSvg} alt="" />
+        <img src={dietSvg} alt="best-food-ever" />
       </HeaderContainer>
       <DetailPart>
         <OtherPart>

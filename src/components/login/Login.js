@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import {
   LoginContainer,
   FormContainer,
@@ -11,13 +10,11 @@ import {
 } from "./LoginStyle";
 import mealSvg from "../../assets/meal2.svg";
 
-const Login = ({ setIsAuth, isAuth }) => {
-  let history = useHistory();
-
+const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    setIsAuth(true);
-    history.push("/");
+    localStorage.setItem("isAuth", true);
+    window.location.href = "/";
   };
   return (
     <LoginContainer>

@@ -27,7 +27,7 @@ export const Hamburger = styled.div`
     display: flex;
   }
 `;
-export const MenuLink = styled(Link)`
+export const MenuLink = styled.a`
   padding: 1rem 2rem;
   cursor: pointer;
   text-align: center;

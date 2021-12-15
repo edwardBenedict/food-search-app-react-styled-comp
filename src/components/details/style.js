@@ -71,3 +71,11 @@ export const OtherPart = styled.div`
   font-size: 1.8rem;
   margin: 2rem;
 `;
+
+export const NotFound = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  font-size: 3rem;
+`;

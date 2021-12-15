@@ -1,15 +1,12 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { RecipeCard, RecipeImage, Button, RecipeHeader } from "./style";
 import defaultImg from "../../assets/default-image.jpg";
 
 const RecipeCardComp = ({ recipe }) => {
-  let history = useHistory();
+  let navigate = useNavigate();
 
   const moreClick = () => {
-    history.push({
-      pathname: "/details",
-      recipe: recipe,
-    });
+    navigate("/details", { state: recipe });
   };
 
   return (

@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Navbar from "../components/navbar/Navbar";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Login from "../components/login/Login";
 import Home from "../components/home/Home";
 import Details from "../components/details/Details";
@@ -8,27 +6,52 @@ import About from "../components/about/About";
 import PrivateRouter from "./PrivateRouter";
 
 function AppRouter() {
-  const [isAuth, setIsAuth] = useState(false);
-
-  const AuthContainer = () => (
-    <div>
-      <Navbar />
-      <PrivateRouter isAuth={isAuth} exact path="/" component={Home} />
-      <PrivateRouter isAuth={isAuth} path="/details" component={Details} />
-      <PrivateRouter isAuth={isAuth} path="/about" component={About} />
-    </div>
-  );
+  const isAuth = localStorage.getItem("isAuth");
 
   return (
     <BrowserRouter>
-      <Switch>
+      <Routes>
         <Route
-          path="/login"
+          path="/"
           exact
-          component={() => <Login setIsAuth={setIsAuth} isAuth={isAuth} />}
+          element={
+            isAuth ? (
+              <PrivateRouter>
+                <Home />
+              </PrivateRouter>
+            ) : (
+              <Login />
+            )
+          }
         />
-        <Route component={AuthContainer} />
-      </Switch>
+        <Route
+          path="/about"
+          exact
+          element={
+            isAuth ? (
+              <PrivateRouter>
+                <About />
+              </PrivateRouter>
+            ) : (
+              <Login />
+            )
+          }
+        />
+        <Route
+          path="/details"
+          exact
+          element={
+            isAuth ? (
+              <PrivateRouter>
+                <Details />
+              </PrivateRouter>
+            ) : (
+              <Login />
+            )
+          }
+        />
+        <Route path="/login" exact element={<Login />} />
+      </Routes>
     </BrowserRouter>
   );
 }

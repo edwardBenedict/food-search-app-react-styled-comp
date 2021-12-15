@@ -23,7 +23,6 @@ const Main = () => {
       if (!result.data.more) {
         console.log("No food with such name");
       }
-      console.log(result.data.hits);
       setRecipes(result.data.hits);
       setQuery("");
     } else {

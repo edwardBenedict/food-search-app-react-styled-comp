@@ -15,15 +15,22 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink to="/about">About</MenuLink>
+        <MenuLink href="/about">About</MenuLink>
         <MenuLink
-          to={{ pathname: "https://github.com/edwardBenedict" }}
+          href="https://github.com/edwardBenedict"
           target="_blank"
           rel="noopener noreferrer"
         >
           Github
         </MenuLink>
-        <MenuLink to="/login">Logout</MenuLink>
+        <MenuLink
+          href="/login"
+          onClick={() => {
+            localStorage.removeItem("isAuth");
+          }}
+        >
+          Logout
+        </MenuLink>
       </Menu>
     </Nav>
   );

@@ -1,23 +1,12 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import Navbar from "../components/navbar/Navbar";
 
-const PrivateRouter = ({ component: Component, isAuth, ...rest }) => {
+const PrivateRouter = ({ isAuth, children, ...rest }) => {
   return (
-    <Route
-      {...rest}
-      render={(props) =>
-        isAuth ? (
-          <Component {...props} />
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: props.location },
-            }}
-          />
-        )
-      }
-    />
+    <>
+      <Navbar />
+      {children}
+    </>
   );
 };
 
